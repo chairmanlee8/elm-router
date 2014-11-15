@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elm URL Router</title>
+    </head>
+
+    <body>
+        <script type="text/javascript" src="/static/elm-router.js"></script>
+        <script type="text/javascript" src="/static/router.js"></script>
+
+        <script type="text/javascript">
+            var router = new ElmRouter().when(/^\/post\/(\d+)/, "PostView")
+                                        .otherwise("DefaultView");
+
+            var app = Elm.fullscreen(Elm.Router, {routerState: router.route()});
+
+            app.ports.requestURL.subscribe(function (url) {
+                window.history.pushState({}, "", url);
+                app.ports.routerState.send(router.route());
+            });
+        </script>
+    </body>
+</html>

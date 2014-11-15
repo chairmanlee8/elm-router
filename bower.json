@@ -1,0 +1,16 @@
+{
+  "name": "elm-router",
+  "main": "elm-router.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/smiley325/elm-router",
+  "authors": [
+    "Andrew Lee <smiley325squared@gmail.com>"
+  ],
+  "description": "Simple Elm URL router",
+  "keywords": [
+    "elm",
+    "url",
+    "routing"
+  ],
+  "license": "MIT"
+}
